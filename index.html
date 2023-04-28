@@ -1,85 +1,59 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/00aaf0ab76.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/00aaf0ab76.js"></script>
     <link rel="stylesheet" href="style.css">
-    
-    <title>Calculadora - By - Léo</title>
 
+    <title>Clima - App</title>
 </head>
 
 <body>
-    <main id="container">
-        
-        <div class="thema">
+    <div class="card">
+        <div class="search">
+            <input type="text" placeholder="enter city name" spellcheck="false">
 
-            <p class="click_here">Mude o Thema</p>
-    
-            <input type="checkbox" class="checkbox" id="chk">
-    
-            <label class="label" for="chk">
-                <i class="fas fa-moon"></i>
-                <i class="fas fa-sun"></i>
-                
-                <div class="ball">
-                    
+            <a href="#">
+                <i class="fas fa-search"></i>
+            </a>
+        </div>
+
+        <div class="error">
+            <p>Invalid city name</p>
+        </div>
+
+        <div class="weather">
+            <img src="images/rain.png" class="weather-icon">
+            <h1 class="temp">22°c</h1>
+            <h2 class="city">New York</h2>
+            <div class="details">
+
+                <div class="col">
+                    <img src="images/humidity.png">
+                    <div>
+                        <p class="humidity">50%</p>
+                        <p>Humidity</p>
+                    </div>
                 </div>
-            </label>
-        </div>
-    
-        <div class="conteudo">
-            <div id="calculator" class="calculator">
-                <p class="result" id="resultado" >   </p>
-    
-                <table class="btns">
-                    <tr>
-                        <td><button class="btn ac" style="width: 106px;" onclick= "clean()" > AC </button> </td>   
-    
-                        <td><button class="btn neg" onclick= "backspace()" > <i class="fas fa-backspace"></i> </button> </td>     
-    
-                        <td><button class="btn special" onclick= "insert('/')"> <i class="fas fa-divide"></i> </button> </td>     
-                    </tr>
-    
-                    <tr>
-                        <td><button class="btn " onclick= "insert('7')" > 7 </button> </td>     
-                        <td><button class="btn "  onclick= "insert('8')"> 8 </button> </td>     
-                        <td><button class="btn " onclick= "insert('9')"> 9 </button> </td>     
-                        <td><button class="btn special" onclick= "insert('*')" > x </button> </td>     
-                    </tr>
-    
-                    <tr>
-                        <td><button class="btn " onclick= "insert('4')" > 4 </button> </td>     
-                        <td><button class="btn " onclick= "insert('5')" > 5 </button> </td>     
-                        <td><button class="btn " onclick= "insert('6')"> 6 </button> </td>     
-                        <td><button class="btn special" onclick= "insert('-')" > - </button> </td>     
-                    </tr>
-    
-                    <tr>
-                        <td><button class="btn " onclick= "insert('1')" > 1 </button> </td>     
-                        <td><button class="btn " onclick= "insert('2')" > 2 </button> </td>     
-                        <td><button class="btn " onclick= "insert('3')"> 3 </button> </td>     
-                        <td><button class="btn special" onclick= "insert('+')"> + </button> </td>     
-                    </tr>
-    
-                    <tr>
-                        <td><button class="btn " onclick= "insert('0')" > 0 </button> </td>     
-                        <td><button class="btn " onclick= "insert('.')" > . </button> </td>          
-                        <td><button class="btn igual" style="width: 106px;" onclick= "confirma()"> = </button> </td>     
-                    </tr>
-    
-                </table>
-    
-                <footer class="footer" footer>© By - Emaús Leonardo </footer>
-            </div>
-        </div>
 
-    </main>
-    
-    <script type="text/javascript" src="script.js"></script>
+                <div class="col">
+                    <img src="images/wind.png">
+                    <div>
+                        <p class="wind">15 km/h</p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer" footer>© By - Emaús Leonardo </footer>
+        </div>
+    </div>
+    </div>
+
 </body>
+
+<script src="script.js"></script>
 
 </html>

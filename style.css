@@ -1,243 +1,120 @@
-:root {
-    --color-light-50: #f8fafc;
-    --color-light-100: #ffacfb;
-
-    --color-black: black;
-    --color-dark-50: #797984;
-    --color-dark-100: #312d37;
-    --color-dark-900: #0C1A21;
-    --color-dark0-1000: #000807;
-
-    --color-bg: #0C1A21;
-
-    --color-pink-50: #fac6ff;
-    --color-pink-100: rgb(164, 86, 172);
-    --color-pink-900: rgb(233, 102, 245);
-
-    --color-calculator: #000807;
-
-    --color-special-hover: rgb(187, 55, 199);
-    --color-igual-hover: rgb(247, 163, 255);
-    --color-btn-hover: #162f3b;
-    --color-btn-hover-light: #e28bde;
-
-    --color-bottom: #f28bff;
-}
-
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
-    font-family: 'Cursive', sans-serif;
 }
 
-body {
-    background-color: var(--color-pink-50);
-
-    transition: background 0.4s linear;
+body {height: 100vh;
+    background: #222;
 }
 
-#container {
-    height: 100vh;
-    width: 100%;
-
+.search {
+    height: 60px;
     display: flex;
+    cursor: pointer;
+    padding: 30px;
+    background: #fff;
+    border-radius: 30px;
+    align-items: center;
     justify-content: center;
-
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 0;
+    
+    transition: width 0.8s;
 }
 
-.checkbox {
-    opacity: 0;
-    position: absolute;
+.search:hover {
+    width: 100%;
 }
 
-.thema {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    margin: 40px;
-}
-
-.label {
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
-    background-color: var(--color-light-50);
-    border-radius: 50px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    position: relative;
-    height: 26px;
-    width: 50px;
-    transform: scale(1.1);
-}
-
-.label .ball {
-    background-color: var(--color-light-100);
-    border-radius: 50%;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    height: 22px;
-    width: 22px;
-    transform: translateX(0px);
-    transition: transform 0.2s linear;
-}
-
-.checkbox:checked+.label .ball {
-    transform: translateX(24px);
-}
-
-.fa-moon {
-    color: #f1c40f;
-}
-
-.fa-sun {
-    color: #f39c12;
-}
-
-.calculator {
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-    position: absolute;
-    width: 250px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 15px;
-    padding: 10px;
-    background-color: var(--color-light-50);
-}
-
-table td {
-    display: inline-block;
-
-}
-
-.btn {
-    margin: 3px;
-    width: 50px;
-    height: 40px;
-    cursor: pointer;
+.search input {
+    width: 100%;
+    outline: none;
     border: none;
-    background-color: var(--color-light-100);
-    color: var(--color-black);
-    font-size: 16px;
-    transition: all 500ms ease-in-out;
+    font-size: 18px;
+    font-weight: 500;
+    background: transparent;
 }
 
-.btn:hover {
-    background-color: var(--color-btn-hover-light);
+.search:hover input {
+    display: block;
 }
 
-.ac {
-    background-color: var(--color-pink-900);
+.search a .fas{
+    color: #1daf;
+    font-size: 18px;
+
 }
 
-.ac:hover {
-    background-color: var(--color-special-hover);
-}
-
-.special {
-    background-color: var(--color-pink-900);
-}
-
-.special:hover {
-    background-color: var(--color-special-hover);
-}
-
-.igual {
-    background-color: var(--color-pink-900);
-}
-
-.igual:hover {
-    background-color: var(--color-special-hover);
-}
-
-.result {
-    height: 100px;
-    color: var(--color-black);
-    text-align: right;
-    font-size: 35px;
-    word-wrap: break-word;
-    border-bottom: 1px solid var(--color-bottom);
-}
-
-.click_here {
-    font-family: 'Cursive', sans-serif;
-    font-weight: 600;
+.card {
+    width: 90%;
+    max-width: 470px;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    color: #fff;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
     text-align: center;
-    padding: 10px;
+}
+
+.weather-icon{
+    width: 170px;
+    margin-top: 30px;
+}
+
+.weather h1{
+    font-size: 80px;
+    font-weight: 500;
+}
+
+.weather h2{
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:  0 20px;
+    margin-top: 50px;
+}
+
+.col{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.col img{
+    width: 40px;
+    margin-right: 10px;
+}
+
+.humidity, .wind{
+    font-size: 20px;
+    margin-top: -6px;
+}
+
+.weather {
+    display: none;
+}
+
+.error{
+    text-align: left;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
 }
 
 .footer {
-    margin: 10px;
+    margin-top: 50px;
     font-family: 'Arial', sans-serif;
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 500;
     text-align: center;
-    color: var(--color-black);
-}
 
-body.dark {
-    background-color: #0c1a21;
-}
-
-.dark .label {
-    background-color: var(--color-dark0-1000);
-}
-
-.dark .label .ball {
-    background-color: var(--color-light-50);
-}
-
-.dark .btn {
-    color: var(--color-light-50);
-    background-color: var(--color-dark-900);
-}
-
-.dark .btn:hover {
-    background-color: var(--color-btn-hover);
-}
-
-.dark .ac {
-    background-color: var(--color-pink-900);
-}
-
-.dark .ac:hover {
-    background-color: var(--color-light-100);
-}
-
-.dark .special {
-    background-color: var(--color-pink-900);
-}
-
-.dark .special:hover {
-    background-color: var(--color-special-hover);
-}
-
-.dark .igual {
-    background-color: var(--color-pink-900);
-}
-
-.dark .igual:hover {
-    background-color: var(--color-igual-hover);
-}
-
-.dark .result {
-    color: var(--color-light-50);
-}
-
-.dark .footer {
-    color: var(--color-light-50);
-}
-
-.dark .calculator {
-    color: var(--color-light-50);
-    background-color: var(--color-dark0-1000);
-    animation: light-to-dark-background 0.1s ease-in-out;
-}
-
-.dark .thema {
-    color: var(--color-light-50);
 }
